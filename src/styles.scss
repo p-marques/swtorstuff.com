@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$ssa-primary-palette : (
+  main: #323232,
+  lighter: #424242,
+  darker: #212121,
+  text: #ddd,
+  contrast: (
+    main: rgba(white, 0.87),
+    lighter: rgba(white, 0.87),
+    darker: rgba(white, 0.87)
+  )
+);
+
+$ssa-accent-palette : (
+  main: #EEE,
+  lighter: #FFF,
+  darker: #CCC,
+  text: #212121,
+  contrast: (
+    main: rgba(#212121, 0.87),
+    lighter: rgba(#212121, 0.87),
+    darker: rgba(#212121, 0.87)
+  )
+);
+
+$ssa-warn-palette : (
+  main: #e6e040,
+  lighter: #e9e57a,
+  darker: #ccc737,
+  text: #212121,
+  contrast: (
+    main: #212121,
+    lighter: #212121,
+    darker: #212121
+  )
+);
+
+$ssa-primary: mat.define-palette($ssa-primary-palette, main, lighter, darker);
+$ssa-accent: mat.define-palette($ssa-accent-palette, main, lighter, darker);
+$ssa-warn: mat.define-palette($ssa-warn-palette, main, lighter, darker);
+
+$ssa-typography: mat.define-typography-config(
+  $font-family: 'Source Code Pro',
+  $display-1: mat.define-typography-level(36px, 1em, 900),
+  $display-4: mat.define-typography-level(26px, 1em, 900),
+  $headline: mat.define-typography-level(48px, 1em, 300),
+  $title: mat.define-typography-level(36px, 1em, 200),
+  $subheading-2: mat.define-typography-level(24px, 1em, 200),
+  $subheading-1: mat.define-typography-level(18px, 1em, 200),
+  $body-1: mat.define-typography-level(14px, 1em, 200),
+  $body-2: mat.define-typography-level(14px, 1em, 400),
+  $caption: mat.define-typography-level(12px, 1em, 200),
+  $button: mat.define-typography-level(16px, 1em, 300),
+  $input: mat.define-typography-level(14px, 1em, 200)
+);
+
+$ssa-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $ssa-primary,
+    accent: $ssa-accent,
+    warn: $ssa-warn,
+  ),
+  typography: $ssa-typography,
+));
+
+@include mat.core($ssa-typography);
+@include mat.all-component-themes($ssa-dark-theme);
+
+$ssa-background-color: #212121;
+
+html, body { height: 100%; width: 100%; background: $ssa-background-color; }
+body { margin: 0; }
+a { cursor: pointer; text-decoration: none; color: inherit; }
+
+// Scrollbar
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #424242; }
+::-webkit-scrollbar-thumb { background: #212121; }
+::-webkit-scrollbar-thumb:hover { background: #555; }

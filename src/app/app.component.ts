@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'swtor-stuff-app';
+  isSmallScreen = false;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+    breakpointObserver.observe([
+      Breakpoints.Large,
+      Breakpoints.Medium,
+      Breakpoints.Small
+    ]).subscribe(_ => {
+      this.handleLayoutChange();
+    });
+  }
+
+  private handleLayoutChange() {
+    this.isSmallScreen = this.breakpointObserver.isMatched('(max-width: 600px)');
+  }
 }

@@ -1,0 +1,30 @@
+:host {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 50%;
+    background-color: #000;
+    padding: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    :host {
+        padding: 5px;
+    }
+}
