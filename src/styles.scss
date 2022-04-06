@@ -55,7 +55,7 @@ $ssa-typography: mat.define-typography-config(
   $body-2: mat.define-typography-level(14px, 1em, 400),
   $caption: mat.define-typography-level(12px, 1em, 200),
   $button: mat.define-typography-level(16px, 1em, 300),
-  $input: mat.define-typography-level(14px, 1em, 200)
+  $input: mat.define-typography-level(18px, 1em, 200)
 );
 
 $ssa-dark-theme: mat.define-dark-theme((
@@ -75,6 +75,7 @@ $ssa-background-color: #212121;
 html, body { height: 100%; width: 100%; background: $ssa-background-color; }
 body { margin: 0; }
 a { cursor: pointer; text-decoration: none; color: inherit; }
+.mat-typography h1,h2,h3,h4,h5,h6 { margin: 0; }
 
 // Scrollbar
 ::-webkit-scrollbar { width: 10px; }

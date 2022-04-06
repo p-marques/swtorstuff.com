@@ -1,0 +1,14 @@
+<div mat-dialog-content>
+    <mat-form-field color="warn">
+      <mat-label>{{data.label}}</mat-label>
+      <mat-select [(ngModel)]="data.selected" name="combatStyle">
+        <mat-option *ngFor="let option of data.options; index as i" [value]="i">
+          {{option}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.selected" cdkFocusInitial>Ok</button>
+  </div>
