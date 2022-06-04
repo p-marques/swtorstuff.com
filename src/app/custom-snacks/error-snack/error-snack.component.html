@@ -1,0 +1,9 @@
+<div class="top-row row">
+    <h3>Error</h3>
+    <button mat-icon-button color="warn" (click)="this.close()" matTooltip="Close" matTooltipPosition="left">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div class="row">
+    <p *ngFor="let error of data">{{error}}</p>
+</div>

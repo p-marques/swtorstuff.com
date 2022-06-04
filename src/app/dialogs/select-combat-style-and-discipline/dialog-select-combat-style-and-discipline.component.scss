@@ -1,0 +1,39 @@
+.mat-dialog-content {
+    min-width: 33vw;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        .select-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            svg-logo {
+                fill: #ddd;
+                height: 60px;
+                width: 60px;
+                align-items: center;
+                flex-grow: .1;
+            }
+
+            mat-option .option-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            mat-form-field {
+                flex-grow: 1;
+            }
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

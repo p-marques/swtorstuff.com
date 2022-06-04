@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <div class="select-wrapper">
+      <svg-logo *ngIf="this.form.value.combatStyle" [svgId]="this.form.value.combatStyle.id"></svg-logo>
+      <mat-form-field appearance="fill" color="warn">
+        <mat-label>Combat Style</mat-label>
+        <mat-select id="combatStyle" (ngModelChange)="this.onSelectedCombatStyleChanged()" formControlName="combatStyle">
+          <mat-option *ngFor="let combatStyle of data.combatStyles" [value]="combatStyle">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+              <span>{{combatStyle.name}}</span>
+              <svg-logo [svgId]="combatStyle.id" style="height: auto; width: 50px; fill: #ddd"></svg-logo>
+          </div>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="select-wrapper">
+      <svg-logo *ngIf="this.form.value.discipline" svgId="{{'role_' + this.form.value.discipline.role}}" matTooltipPosition="left" matTooltip="Role: {{this.form.value.discipline.role}}"></svg-logo>
+      <mat-form-field appearance="fill" color="warn">
+        <mat-label>Discipline</mat-label>
+        <mat-select id="discipline" formControlName="discipline">
+          <mat-option *ngFor="let discipline of this.form.value.combatStyle?.disciplines" [value]="discipline">
+            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+              <span>{{discipline.name}}</span>
+              <svg-logo [svgId]="'role_' + discipline.role" style="height: auto; width: 50px; fill: #ddd"></svg-logo>
+            </div>
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="buttons-container">
+      <button mat-flat-button mat-dialog-close>Cancel</button>
+      <span [matTooltipDisabled]="form.valid" matTooltip="All fields are required">
+        <button mat-flat-button color="warn" type="submit" [mat-dialog-close]="this.returnData" [disabled]="!form.valid">Save</button>
+      </span>
+    </div>
+  </form>
+</div>

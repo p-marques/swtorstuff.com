@@ -1,10 +1,105 @@
-div {
+.builder-container {
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .no-character-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 100%;
+        width: 100%;
+
+        .new-character-form {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .select-wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                svg-logo {
+                    fill: #ddd;
+                    height: 60px;
+                    width: 60px;
+                    align-items: center;
+                    flex-grow: .1;
+                }
+
+                mat-form-field {
+                    flex-grow: 1;
+                }
+            }
+
+            mat-radio-group {
+                mat-radio-button {
+                    margin-right: 15px;
+                }
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    .character-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .basic-info-container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            background-color: rgba($color: #424242, $alpha: 0.4);
+            border-radius: 8px;
+            padding: 1vh 1vw;
+
+            .data-row {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1vw;
+
+                a:first-child {
+                    width: 10vh;
+                    display: flex;
+                    justify-content: center;
+
+                    svg-logo { fill: #ddd; height: 10vh; }
+                }
+            }
+
+            #discipline.data-row svg-logo { height: 6vh; }
+        }
+    }
 }
 
-.builder-container {
-    .data-bit {
-        margin-bottom: 20px;
+.builder-container { background: transparent; }
+.builder-container.republic {
+    background-color: rgba(0, 174, 255, 0.06);
+
+    .inner-container, .character-container, .no-character-block {
+        background: url("/assets/logo_republic.svg") no-repeat;
+        background-size: cover;
+    }
+}
+.builder-container.empire {
+    background-color: rgba(190, 0, 0, 0.06);
+
+    .inner-container, .character-container, .no-character-block {
+        background: url("/assets/logo_sith_empire.svg") no-repeat;
+        background-size: cover;
     }
 }

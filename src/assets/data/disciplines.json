@@ -1,0 +1,272 @@
+[
+    {
+        "id": "defense",
+        "name": "Defense",
+        "role": "tank",
+        "combatStyleId": "guardian"
+    },
+    {
+        "id": "vigilance",
+        "name": "Vigilance",
+        "role": "dps",
+        "combatStyleId": "guardian"
+    },
+    {
+        "id": "focus",
+        "name": "Focus",
+        "role": "dps",
+        "combatStyleId": "guardian"
+    },
+    {
+        "id": "watchman",
+        "name": "Watchman",
+        "role": "dps",
+        "combatStyleId": "sentinel"
+    },
+    {
+        "id": "combat",
+        "name": "Combat",
+        "role": "dps",
+        "combatStyleId": "sentinel"
+    },
+    {
+        "id": "concentration",
+        "name": "Concentration",
+        "role": "dps",
+        "combatStyleId": "sentinel"
+    },
+    {
+        "id": "seer",
+        "name": "Seer",
+        "role": "healer",
+        "combatStyleId": "sage"
+    },
+    {
+        "id": "telekinetics",
+        "name": "Telekinetics",
+        "role": "dps",
+        "combatStyleId": "sage"
+    },
+    {
+        "id": "balance",
+        "name": "Balance",
+        "role": "dps",
+        "combatStyleId": "sage"
+    },
+    {
+        "id": "kinetic_combat",
+        "name": "Kinetic Combat",
+        "role": "tank",
+        "combatStyleId": "shadow"
+    },
+    {
+        "id": "infiltration",
+        "name": "Infiltration",
+        "role": "dps",
+        "combatStyleId": "shadow"
+    },
+    {
+        "id": "serenity",
+        "name": "Serenity",
+        "role": "dps",
+        "combatStyleId": "shadow"
+    },
+    {
+        "id": "combat_medic",
+        "name": "Combat Medic",
+        "role": "healer",
+        "combatStyleId": "commando"
+    },
+    {
+        "id": "gunnery",
+        "name": "Gunnery",
+        "role": "dps",
+        "combatStyleId": "commando"
+    },
+    {
+        "id": "assault_specialist",
+        "name": "Assault Specialist",
+        "role": "dps",
+        "combatStyleId": "commando"
+    },
+    {
+        "id": "shield_specialist",
+        "name": "Shield Specialist",
+        "role": "tank",
+        "combatStyleId": "vanguard"
+    },
+    {
+        "id": "plasmatech",
+        "name": "Plasmatech",
+        "role": "dps",
+        "combatStyleId": "vanguard"
+    },
+    {
+        "id": "tactics",
+        "name": "Tactics",
+        "role": "dps",
+        "combatStyleId": "vanguard"
+    },
+    {
+        "id": "sharpshooter",
+        "name": "Sharpshooter",
+        "role": "dps",
+        "combatStyleId": "gunslinger"
+    },
+    {
+        "id": "saboteur",
+        "name": "Saboteur",
+        "role": "dps",
+        "combatStyleId": "gunslinger"
+    },
+    {
+        "id": "dirty_fighting",
+        "name": "Dirty Fighting",
+        "role": "dps",
+        "combatStyleId": "gunslinger"
+    },
+    {
+        "id": "sawbones",
+        "name": "Sawbones",
+        "role": "healer",
+        "combatStyleId": "scoundrel"
+    },
+    {
+        "id": "scrapper",
+        "name": "Scrapper",
+        "role": "dps",
+        "combatStyleId": "scoundrel"
+    },
+    {
+        "id": "ruffian",
+        "name": "Ruffian",
+        "role": "dps",
+        "combatStyleId": "scoundrel"
+    },
+    {
+        "id": "immortal",
+        "name": "Immortal",
+        "role": "tank",
+        "combatStyleId": "juggernaut"
+    },
+    {
+        "id": "vengeance",
+        "name": "Vengeance",
+        "role": "dps",
+        "combatStyleId": "juggernaut"
+    },
+    {
+        "id": "rage",
+        "name": "Rage",
+        "role": "dps",
+        "combatStyleId": "juggernaut"
+    },
+    {
+        "id": "annihilation",
+        "name": "Annihilation",
+        "role": "dps",
+        "combatStyleId": "marauder"
+    },
+    {
+        "id": "carnage",
+        "name": "Carnage",
+        "role": "dps",
+        "combatStyleId": "marauder"
+    },
+    {
+        "id": "fury",
+        "name": "Fury",
+        "role": "dps",
+        "combatStyleId": "marauder"
+    },
+    {
+        "id": "corruption",
+        "name": "Corruption",
+        "role": "healer",
+        "combatStyleId": "sorcerer"
+    },
+    {
+        "id": "lightning",
+        "name": "Lightning",
+        "role": "dps",
+        "combatStyleId": "sorcerer"
+    },
+    {
+        "id": "madness",
+        "name": "Madness",
+        "role": "dps",
+        "combatStyleId": "sorcerer"
+    },
+    {
+        "id": "darkness",
+        "name": "Darkness",
+        "role": "tank",
+        "combatStyleId": "assassin"
+    },
+    {
+        "id": "deception",
+        "name": "Deception",
+        "role": "dps",
+        "combatStyleId": "assassin"
+    },
+    {
+        "id": "hatred",
+        "name": "Hatred",
+        "role": "dps",
+        "combatStyleId": "assassin"
+    },
+    {
+        "id": "bodyguard",
+        "name": "Bodyguard",
+        "role": "healer",
+        "combatStyleId": "mercenary"
+    },
+    {
+        "id": "arsenal",
+        "name": "Arsenal",
+        "role": "dps",
+        "combatStyleId": "mercenary"
+    },
+    {
+        "id": "innovative_ordnance",
+        "name": "Innovative Ordnance",
+        "role": "dps",
+        "combatStyleId": "mercenary"
+    },
+    {
+        "id": "marksmanship",
+        "name": "Marksmanship",
+        "role": "dps",
+        "combatStyleId": "sniper"
+    },
+    {
+        "id": "engineering",
+        "name": "Engineering",
+        "role": "dps",
+        "combatStyleId": "sniper"
+    },
+    {
+        "id": "virulence",
+        "name": "Virulence",
+        "role": "dps",
+        "combatStyleId": "sniper"
+    },
+    {
+        "id": "medicine",
+        "name": "Medicine",
+        "role": "healer",
+        "combatStyleId": "operative"
+    },
+    {
+        "id": "concealment",
+        "name": "Concealment",
+        "role": "dps",
+        "combatStyleId": "operative"
+    },
+    {
+        "id": "lethality",
+        "name": "Lethality",
+        "role": "dps",
+        "combatStyleId": "operative"
+    }
+]

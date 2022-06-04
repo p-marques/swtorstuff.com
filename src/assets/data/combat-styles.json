@@ -1,0 +1,77 @@
+[
+    {
+        "id": "guardian",
+        "name": "Jedi Guardian",
+        "disciplinesIds": [ "defense", "vigilance", "focus" ]
+    },
+    {
+        "id": "sentinel",
+        "name": "Jedi Sentinel",
+        "disciplinesIds": [ "watchman", "combat", "concentration" ]
+    },
+    {
+        "id": "sage",
+        "name": "Jedi Sage",
+        "disciplinesIds": [ "seer", "telekinetics", "balance" ]
+    },
+    {
+        "id": "shadow",
+        "name": "Jedi Shadow",
+        "disciplinesIds": [ "kinetic_combat", "infiltration", "serenity" ]
+    },
+    {
+        "id": "commando",
+        "name": "Commando",
+        "disciplinesIds": [ "combat_medic", "gunnery", "assault_specialist" ]
+    },
+    {
+        "id": "vanguard",
+        "name": "Vanguard",
+        "disciplinesIds": [ "shield_specialist", "plasmatech", "tactics" ]
+    },
+    {
+        "id": "gunslinger",
+        "name": "Gunslinger",
+        "disciplinesIds": [ "sharpshooter", "saboteur", "dirty_fighting" ]
+    },
+    {
+        "id": "scoundrel",
+        "name": "Scoundrel",
+        "disciplinesIds": [ "sawbones", "scrapper", "ruffian" ]
+    },
+    {
+        "id": "juggernaut",
+        "name": "Sith Juggernaut",
+        "disciplinesIds": [ "immortal", "vengeance", "rage" ]
+    },
+    {
+        "id": "marauder",
+        "name": "Sith Marauder",
+        "disciplinesIds": [ "annihilation", "carnage", "fury" ]
+    },
+    {
+        "id": "sorcerer",
+        "name": "Sith Sorcerer",
+        "disciplinesIds": [ "corruption", "lightning", "madness" ]
+    },
+    {
+        "id": "assassin",
+        "name": "Sith Assassin",
+        "disciplinesIds": [ "darkness", "deception", "hatred" ]
+    },
+    {
+        "id": "mercenary",
+        "name": "Mercenary",
+        "disciplinesIds": [ "bodyguard", "arsenal", "innovative_ordnance" ]
+    },
+    {
+        "id": "sniper",
+        "name": "Sniper",
+        "disciplinesIds": [ "marksmanship", "engineering", "virulence" ]
+    },
+    {
+        "id": "operative",
+        "name": "Operative",
+        "disciplinesIds": [ "medicine", "concealment", "lethality" ]
+    }
+]

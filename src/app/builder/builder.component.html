@@ -1,6 +1,64 @@
-<div class="builder-container">
-    <div class="primary-data">
-        <a class="data-bit mat-h1" (click)="editCharacterName()">{{character.name}}</a>
-        <a class="data-bit mat-h4" (click)="editCharacterStyle()">Level {{character.level}} {{character.combatStyleName}}</a>
+<div class="builder-container" [ngClass]="this.currentFactionSelected == 0 ? 'republic' : 'empire'">
+    <div class="no-character-block" *ngIf="!builder.character.name; else characterDetailsBlock">
+        <form [formGroup]="newCharacterForm" (ngSubmit)="onSubmitNewCharacter()" class="new-character-form">
+            <mat-form-field appearance="fill" color="accent">
+              <mat-label>Character Name</mat-label>
+              <input id="name" type="text" matInput minlength="3" maxlength="20" formControlName="name">
+            </mat-form-field>
+            <div class="select-wrapper">
+                <svg-logo *ngIf="this.newCharacterForm.value.combatStyle" [svgId]="this.newCharacterForm.value.combatStyle.id"></svg-logo>
+                <mat-form-field appearance="fill" color="accent">
+                    <mat-label>Combat Style</mat-label>
+                    <mat-select id="combatStyle" panelClass="cs-select" formControlName="combatStyle" (ngModelChange)="this.onSelectedCombatStyleChanged()">
+                        <mat-option *ngFor="let combatStyle of this.builder.combatStyles" [value]="combatStyle">
+                            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                <span>{{combatStyle.name}}</span>
+                                <svg-logo [svgId]="combatStyle.id" style="height: auto; width: 50px; fill: #ddd"></svg-logo>
+                            </div>
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="select-wrapper">
+                <svg-logo *ngIf="this.newCharacterForm.value.discipline" svgId="{{'role_' + this.roleForSelectedDiscipline}}" matTooltipPosition="left" matTooltip="Role: {{this.roleForSelectedDiscipline}}"></svg-logo>
+                <mat-form-field appearance="fill" color="accent">
+                    <mat-label>Discipline</mat-label>
+                    <mat-select id="discipline" formControlName="discipline">
+                        <mat-option *ngFor="let discipline of this.newCharacterForm.value.combatStyle?.disciplines" [value]="discipline">
+                            <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
+                                <span>{{discipline.name}}</span>
+                                <svg-logo [svgId]="'role_' + discipline.role" style="height: auto; width: 50px; fill: #ddd"></svg-logo>
+                            </div>
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <mat-radio-group id="faction" formControlName="faction">
+                <mat-radio-button *ngFor="let faction of builder.factions; index as i" [value]="i">
+                    {{faction}}
+                </mat-radio-button>
+            </mat-radio-group>
+            <span [matTooltip]="newCharacterForm.valid ? 'Create new character' : 'All fields are required'">
+                <button mat-raised-button type="submit" [disabled]="!newCharacterForm.valid">Create</button>
+            </span>
+        </form>
     </div>
+    <ng-template #characterDetailsBlock>
+        <div class="character-container">
+            <div class="basic-info-container">
+                <div id="name" *ngIf="builder.character.combatStyle" class="data-row">
+                    <a (click)="editCharacterCombatStyleAndDiscipline()">
+                        <svg-logo matTooltip="Change combat style / discipline" [svgId]="this.builder.character.combatStyle?.id"></svg-logo>
+                    </a>
+                    <a matTooltip="Change name" (click)="editCharacterName()"><h1>{{builder.character.name}}</h1></a>
+                </div>
+                <div id="discipline" *ngIf="builder.character.discipline" class="data-row">
+                    <a (click)="editCharacterCombatStyleAndDiscipline()">
+                        <svg-logo matTooltip="Change combat style / discipline" [svgId]="'role_' + this.builder.character.discipline.role"></svg-logo>
+                    </a>
+                    <a matTooltip="Change combat style / discipline" (click)="editCharacterCombatStyleAndDiscipline()"><h3>{{builder.character.discipline.name}}</h3></a>
+                </div>
+            </div>
+        </div>
+    </ng-template>
 </div>

@@ -1,0 +1,26 @@
+@use  '../../../styles.scss' as base;
+
+:host {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: base.$ssa-warn-main;
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid base.$ssa-warn-main;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top-left-radius: base.$mat-snack-bar-border-radius;
+    border-top-right-radius: base.$mat-snack-bar-border-radius;
+}
+
+.row {
+    padding: 1vh 1vw;
+}
+
+p, h3 { margin: 0; }
